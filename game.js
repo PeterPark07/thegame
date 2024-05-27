@@ -11,6 +11,10 @@ const difficultyLevels = {
     'expert': {'multiplier': 100000, 'secret_msg': "I am the smartest man alive!"}
 };
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateMessage();
+});
+
 function placeBet() {
     const betInput = document.getElementById('bet');
     const betAmount = parseInt(betInput.value);
@@ -39,9 +43,16 @@ function placeBet() {
     currencyElement.innerText = currency;
 
     if (currency === 0) {
-        resultElement.innerHTML += `<br>You lost after ${n} tries. 😓<br>Restart the game. 🔄`;
+        resultElement.innerHTML += `<br>You lost after ${n} tries. 😓<br>Restart the game by refreshing the page. 🔄`;
     } else if (currency >= goalAmount) {
         const secretMsg = difficultyLevels[difficulty]['secret_msg'];
         resultElement.innerHTML += `<br>Congratulations! You reached the goal amount (${goalAmount}💰) after ${n} tries. 🎉<br>Secret Phrase: ${secretMsg}<br>Your Score: ${n} 🚀`;
     }
+
+    updateMessage();
+}
+
+function updateMessage() {
+    const messageElement = document.querySelector('.message');
+    messageElement.innerHTML = `Welcome to LuckyBet! You have <span id="currency">${currency}</span>💰 currency.<br>Goal: ${goalAmount}💰 (Difficulty: ${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)})`;
 }
