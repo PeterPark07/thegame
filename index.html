@@ -3,56 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuckyBet - The Ultimate Betting Game</title>
+    <title>Betting Game</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #f0f8ff;
-            color: #333;
-        }
-        h1 {
-            color: #0066cc;
         }
         #game {
             margin-top: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            width: 80%;
-            max-width: 600px;
         }
         input, button {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
         }
-        button {
-            background-color: #0066cc;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #005bb5;
-        }
-        .message, .result {
-            font-size: 18px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
-    <h1>🎲 LuckyBet - The Betting Game 🎲</h1>
+    <h1>🎲🎉 Betting Game 🎉🎲</h1>
     <div id="game">
-        <p class="message">Welcome to LuckyBet! You have <span id="currency">100</span>💰 currency.</p>
+        <p id="message">Welcome to the betting game! You have <span id="currency">100</span>💰 currency.</p>
         <input type="number" id="bet" placeholder="Enter your bet" min="1">
         <button onclick="placeBet()">Place Bet</button>
-        <p class="result" id="result"></p>
+        <p id="result"></p>
     </div>
     <script src="game.js"></script>
 </body>
