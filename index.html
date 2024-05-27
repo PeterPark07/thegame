@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #game {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎲🎉 Betting Game 🎉🎲</h1>
+    <div id="game">
+        <p id="message">Welcome to the betting game! You have <span id="currency">100</span>💰 currency.</p>
+        <input type="number" id="bet" placeholder="Enter your bet" min="1">
+        <button onclick="placeBet()">Place Bet</button>
+        <p id="result"></p>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
